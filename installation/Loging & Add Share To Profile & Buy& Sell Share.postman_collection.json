@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "ffced4a2-ae7e-45d6-82b7-dfa550694f8e",
+		"name": "Loging & Add Share To Profile & Buy& Sell Share",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8472831"
+	},
+	"item": [
+		{
+			"name": "loginAsMarketPlayer Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();\r",
+							"\r",
+							"// Check if the response indicates success\r",
+							"if (response.success) {\r",
+							"    // Set the global variable \"authToken\" with the value of the token from the response\r",
+							"    pm.globals.set(\"authToken\", response.data.token);\r",
+							"\r",
+							"    // Optionally, you can also set the expiration date as a global variable\r",
+							"    pm.globals.set(\"tokenExpiration\", response.data.expiration);\r",
+							"\r",
+							"    // Log a message to indicate the global variables have been set\r",
+							"    console.log(\"Global variables 'authToken' and 'tokenExpiration' have been set.\");\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"bob@example.com\",\r\n  \"pwd\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AppUrl}}/api/User?email=bob@example.com&Pwd=1234",
+					"host": [
+						"{{AppUrl}}"
+					],
+					"path": [
+						"api",
+						"User"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "bob@example.com"
+						},
+						{
+							"key": "Pwd",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Share to Porfoi Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ShareId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AppUrl}}/api/Share/AddToPortfolios",
+					"host": [
+						"{{AppUrl}}"
+					],
+					"path": [
+						"api",
+						"Share",
+						"AddToPortfolios"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Share to Porfoi Already Exists Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ShareId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AppUrl}}/api/Share/AddToPortfolios",
+					"host": [
+						"{{AppUrl}}"
+					],
+					"path": [
+						"api",
+						"Share",
+						"AddToPortfolios"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Share to Porfoi Invalid Share Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ShareId\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AppUrl}}/api/Share/AddToPortfolios",
+					"host": [
+						"{{AppUrl}}"
+					],
+					"path": [
+						"api",
+						"Share",
+						"AddToPortfolios"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuyShare Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ShareId\": 5,\r\n  \"Amount\": \"2.2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AppUrl}}/api/Portfolios/BuyShare",
+					"host": [
+						"{{AppUrl}}"
+					],
+					"path": [
+						"api",
+						"Portfolios",
+						"BuyShare"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SellShare Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ShareId\": 2,\r\n  \"Amount\": 3.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{AppUrl}}/api/Portfolios/SellShare",
+					"host": [
+						"{{AppUrl}}"
+					],
+					"path": [
+						"api",
+						"Portfolios",
+						"SellShare"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

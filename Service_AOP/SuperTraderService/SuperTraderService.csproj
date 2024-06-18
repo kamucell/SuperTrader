@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SharePriceDetail\DTOs\Abstract\**" />
+    <EmbeddedResource Remove="SharePriceDetail\DTOs\Abstract\**" />
+    <None Remove="SharePriceDetail\DTOs\Abstract\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data.Entities\Data.Entities.csproj" />
+    <ProjectReference Include="..\Data.Repository\Data.Repository.csproj" />
+    <ProjectReference Include="..\SuperTrader.Core\SuperTrader.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ShareOwner\DTOs\Map\" />
+    <Folder Include="ShareOwner\DTOs\Validation\" />
+    <Folder Include="ShareOwner\Events\" />
+    <Folder Include="ShareOwner\Rules\" />
+    <Folder Include="SharePriceDetail\Events\" />
+    <Folder Include="Transaction\DTOs\Validation\" />
+    <Folder Include="Transaction\Events\" />
+    <Folder Include="Transaction\Rules\" />
+    <Folder Include="User\Events\" />
+    <Folder Include="User\Rules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="7.1.0" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperTrader.Core", "SuperTrader.Core.csproj", "{5764B222-8B26-4756-91D6-B13324EC38BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3081B0B5-F982-4259-BA6C-08BD4F53DF2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Entities", "..\Data.Entities\Data.Entities.csproj", "{78557D6E-6D2C-454E-A689-2733AAFF49C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Repository", "..\Data.Repository\Data.Repository.csproj", "{D56982AA-B659-46DC-9C6E-BCC73D75CC35}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperTrader.WebApi", "..\SuperTrader.WebApi\SuperTrader.WebApi.csproj", "{341D5AF4-4334-4E26-AE14-E6FC36FD6AE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infracture", "Infracture", "{965AB44B-E518-4245-A8C6-F6D119BD83CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperTraderService", "..\SuperTraderService\SuperTraderService.csproj", "{12CEEC86-BDB0-407A-8874-C118E4146C69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5764B222-8B26-4756-91D6-B13324EC38BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5764B222-8B26-4756-91D6-B13324EC38BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5764B222-8B26-4756-91D6-B13324EC38BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5764B222-8B26-4756-91D6-B13324EC38BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78557D6E-6D2C-454E-A689-2733AAFF49C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78557D6E-6D2C-454E-A689-2733AAFF49C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78557D6E-6D2C-454E-A689-2733AAFF49C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78557D6E-6D2C-454E-A689-2733AAFF49C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D56982AA-B659-46DC-9C6E-BCC73D75CC35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D56982AA-B659-46DC-9C6E-BCC73D75CC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D56982AA-B659-46DC-9C6E-BCC73D75CC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D56982AA-B659-46DC-9C6E-BCC73D75CC35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{341D5AF4-4334-4E26-AE14-E6FC36FD6AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{341D5AF4-4334-4E26-AE14-E6FC36FD6AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{341D5AF4-4334-4E26-AE14-E6FC36FD6AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{341D5AF4-4334-4E26-AE14-E6FC36FD6AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CEEC86-BDB0-407A-8874-C118E4146C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CEEC86-BDB0-407A-8874-C118E4146C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CEEC86-BDB0-407A-8874-C118E4146C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CEEC86-BDB0-407A-8874-C118E4146C69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78557D6E-6D2C-454E-A689-2733AAFF49C9} = {3081B0B5-F982-4259-BA6C-08BD4F53DF2E}
+		{D56982AA-B659-46DC-9C6E-BCC73D75CC35} = {3081B0B5-F982-4259-BA6C-08BD4F53DF2E}
+		{12CEEC86-BDB0-407A-8874-C118E4146C69} = {965AB44B-E518-4245-A8C6-F6D119BD83CB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F694172A-10D3-4074-B631-9047AB344F72}
+	EndGlobalSection
+EndGlobal

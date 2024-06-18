@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "9927d965-3f0e-4caa-b898-3c1b5d3d20ed",
+		"name": "Login & Add Share & updatePrice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8472831"
+	},
+	"item": [
+		{
+			"name": "loginAsShareOwner",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();\r",
+							"\r",
+							"// Check if the response indicates success\r",
+							"if (response.success) {\r",
+							"    // Set the global variable \"authToken\" with the value of the token from the response\r",
+							"    pm.globals.set(\"authToken\", response.data.token);\r",
+							"\r",
+							"    // Optionally, you can also set the expiration date as a global variable\r",
+							"    pm.globals.set(\"tokenExpiration\", response.data.expiration);\r",
+							"\r",
+							"    // Log a message to indicate the global variables have been set\r",
+							"    console.log(\"Global variables 'authToken' and 'tokenExpiration' have been set.\");\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"alice@example.com\",\r\n  \"pwd\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7275/api/User?email=alice@example.com&Pwd=1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7275",
+					"path": [
+						"api",
+						"User"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "alice@example.com"
+						},
+						{
+							"key": "Pwd",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Share to DB",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"Name\": \"kamuran\",\r\n  \"Code\": \"KA2\",\r\n  \"quantity\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7275/api/Share/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7275",
+					"path": [
+						"api",
+						"Share",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Price Share",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"ShareId\": 2,\r\n  \"Price\": 120\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7275/api/Share/UpdatePrice",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7275",
+					"path": [
+						"api",
+						"Share",
+						"UpdatePrice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

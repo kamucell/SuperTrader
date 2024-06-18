@@ -1,0 +1,6 @@
+@SuperTrader.WebApi_HostAddress = http://localhost:5062
+
+GET {{SuperTrader.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
