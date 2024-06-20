@@ -7,6 +7,7 @@ I use two main approaches for developing applications:
 1. **Services**
    - Aspect-Oriented Framework (AOF)
    - Dependency Injection
+   - Observer Pattern (Event attribute)
 
 2. **Mediator & CQRS**
    - Command Query Responsibility Segregation (CQRS)
