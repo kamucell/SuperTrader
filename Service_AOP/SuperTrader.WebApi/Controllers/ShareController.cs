@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SuperTraderService.Portfolio.Abstract;
 using SuperTraderService.Portfolio.DTOs;
@@ -29,18 +30,21 @@ namespace SuperTrader.WebApi.Controllers
 
         }
         [HttpPost( "AddShare")]
+        [Authorize]
         public async  Task<IResult> AddShare(ShareDto data)
         {
             var tkn = await _serviceShare.AddShare(data);
             return tkn;
         }
         [HttpPost("AddToPortfolios")]
+        [Authorize]
         public async Task<IResult> AddToPortfolios(AddShareDto data)
         {
             var tkn = await _servicePortfolio.AddShareToPortfolio(data);
             return tkn;
         }
         [HttpPost("UpdatePrice")]
+               
         public async Task<IResult> UpdatePrice(UpdatePriceDTOs data)
         {
             data.UserId = _userId;
