@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SuperTrader.Domain
 {
-    public class Share : BaseEntity<int>
+    public record Share : BaseEntity<int>
     {
         public string Name { get; set; }
         public string Code { get; set; }

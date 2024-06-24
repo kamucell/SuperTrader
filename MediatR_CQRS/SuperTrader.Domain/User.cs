@@ -1,7 +1,7 @@
 ﻿using SuperTrader.Core.Entities;
 namespace SuperTrader.Domain
 {
-    public class User : BaseEntity<int>
+    public record User : BaseEntity<int>
     {
         public string FullName { get; set; }
         public string Pwd { get; set; }

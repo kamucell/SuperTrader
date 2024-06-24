@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SuperTrader.Domain
 {
-    public class SharePriceDetail : BaseEntity<int>
+    public record SharePriceDetail : BaseEntity<int>
     {
 
         public int ShareId { get; set; }

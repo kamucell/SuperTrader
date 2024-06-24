@@ -2,15 +2,12 @@
 
 namespace SuperTrader.Domain
 {
-    public class Portfolio : BaseEntity<int>
+    public record Portfolio : BaseEntity<int>
     {
-
-        public int UserId { get; set; }
-        public int ShareId { get; set; }
-        public decimal Quantity { get; set; }
-        public virtual Share Share { get; set; }
-        public virtual User User { get; set; }
-
-
+        public int UserId { get; init; }
+        public int ShareId { get; init; }
+        public decimal Quantity { get; init; }
+        public virtual Share Share { get; init; }
+        public virtual User User { get; init; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SuperTrader.Core.Entities
 {
     
-    public  class BaseEntity<T>: IEntity 
+    public  record BaseEntity<T>: IEntity 
     {
         public BaseEntity()
         {

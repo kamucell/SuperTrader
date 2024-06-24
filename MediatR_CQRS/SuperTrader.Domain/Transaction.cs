@@ -4,7 +4,7 @@ using SuperTrader.Domain.Structure;
 
 namespace SuperTrader.Domain
 {
-    public class Transaction : BaseEntity<int>
+    public record Transaction : BaseEntity<int>
     {
         public int UserId { get; set; }
         public int ShareId { get; set; }
