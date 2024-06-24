@@ -1,0 +1,19 @@
+﻿
+-- user information
+INSERT INTO [dbo].[Users]([FullName],[Pwd],[Email],[UserType],[UpdatedDate],[UpdatedBy],[IsDeleted])
+     VALUES('Alice', 'alice@example.com','1234','1',GETDATE(),1,0)
+INSERT INTO [dbo].[Users]([FullName],[Pwd],[Email],[UserType],[UpdatedDate],[UpdatedBy],[IsDeleted])
+     VALUES('Bob', 'bob@example.com','1234','1',GETDATE(),1,0)
+
+INSERT INTO [dbo].[Users]([FullName],[Pwd],[Email],[UserType],[UpdatedDate],[UpdatedBy],[IsDeleted])
+     VALUES('Charlie', 'charlie@example.com','1234','1',GETDATE(),1,0)
+
+INSERT INTO [dbo].[Users]([FullName],[Pwd],[Email],[UserType],[UpdatedDate],[UpdatedBy],[IsDeleted])
+     VALUES('David', 'david@example.com','1234','1',GETDATE(),1,0)
+
+INSERT INTO [dbo].[Users]([FullName],[Pwd],[Email],[UserType],[UpdatedDate],[UpdatedBy],[IsDeleted])
+     VALUES('Eve', 'eve@example.com','1234','1',GETDATE(),1,0)
+
+
+
+

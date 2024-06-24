@@ -14,4 +14,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Data.Repository\Data.Repository.csproj" />
+    <ProjectReference Include="..\SuperTrader.Domain\SuperTrader.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
