@@ -6,16 +6,17 @@ namespace SuperTrader.Domain
 {
     public record Transaction : BaseEntity<int>
     {
-        public int UserId { get; set; }
-        public int ShareId { get; set; }
-        public EnumTransactionType TransactionType { get; set; }
-        public decimal Sold { get; set; }
-        public decimal Remain { get; set; }
-        public decimal Price { get; set; }
-        public DateTime TransactionDate { get; set; }
-        public virtual Share Share { get; set; }
-        public virtual User User { get; set; }
-
-
+        public int UserId { get; init; }
+        public int ShareId { get; init; }
+        public EnumTransactionType TransactionType { get; init; }
+        public decimal Sold { get; init; }
+        public decimal Remain { get; init; }
+        public decimal Price { get; init; }
+        public DateTime TransactionDate { get; init; }
+        public virtual Share? Share { get; init; }
+        public virtual User? User { get; init; }
     }
+
+
 }
+

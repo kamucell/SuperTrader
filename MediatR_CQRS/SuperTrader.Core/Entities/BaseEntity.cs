@@ -13,7 +13,7 @@ namespace SuperTrader.Core.Entities
         {
 
             if (!(typeof(T).IsPrimitive && typeof(T) != typeof(bool) && typeof(T) != typeof(char)))
-                throw new Exception("T Have to be number");
+                throw new System.Exception("T Have to be number");
 
 
         }

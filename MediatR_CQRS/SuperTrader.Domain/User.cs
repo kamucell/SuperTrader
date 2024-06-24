@@ -3,16 +3,14 @@ namespace SuperTrader.Domain
 {
     public record User : BaseEntity<int>
     {
-        public string FullName { get; set; }
-        public string Pwd { get; set; }
-        public string Email { get; set; }
-        public int UserType { get; set; }
+        public string FullName { get; init; }
+        public string Pwd { get; init; }
+        public string Email { get; init; }
+        public int UserType { get; init; }
 
-        public virtual ICollection<Portfolio> Portfolios { get; set; }
-        public virtual ICollection<ShareOwner> ShareOwners { get; set; }
-        public virtual ICollection<Share> Shares { get; set; }
-        public virtual ICollection<Transaction> Transactions { get; set; }
-
-
+        public virtual ICollection<Portfolio> Portfolios { get; init; }
+        public virtual ICollection<ShareOwner> ShareOwners { get; init; }
+        public virtual ICollection<Share> Shares { get; init; }
+        public virtual ICollection<Transaction> Transactions { get; init; }
     }
 }
