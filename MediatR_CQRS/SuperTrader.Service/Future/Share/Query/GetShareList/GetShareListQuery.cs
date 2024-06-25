@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MediatR;
 using SuperTrader.Service.Future.Share.DTOs;
 
-namespace SuperTrader.Service.Future.Share.Query
+namespace SuperTrader.Service.Future.Share.Query.GetShareList
 {
     public class GetShareListQuery : IRequest<ShareListDto>
     {

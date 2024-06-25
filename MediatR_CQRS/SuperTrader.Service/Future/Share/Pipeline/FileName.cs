@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperTrader.Service.Future.Share.DTOs
+namespace SuperTrader.Service.Future.Share.Pipeline
 {
-    public class ShareListDto
+    internal class FileName
     {
     }
 }
