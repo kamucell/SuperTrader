@@ -9,7 +9,7 @@ I use two main approaches for developing applications:
    - Dependency Injection
    - Observer Pattern (Event attribute)
 
-2. **Mediator & CQRS**
+2. **Mediator & CQRS** (İt is under development)
    - Command Query Responsibility Segregation (CQRS)
 
 ## Technology Stack
